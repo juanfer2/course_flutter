@@ -40,6 +40,7 @@ class ListMenuWidget extends StatelessWidget {
             color: Colors.blue,
           ),
           onTap: () {
+            Navigator.pushNamed(context, item['ruta']);
             // final route = MaterialPageRoute(
             //   builder: (context) => AlertPage(),
             // );
