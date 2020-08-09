@@ -5,8 +5,9 @@ class AvatarPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Text('Avatar-----Page'),
+    return Scaffold(
+      appBar: AppBar(title: Text('Avatar')),
+      body: Text('Avatar'),
     );
   }
 }

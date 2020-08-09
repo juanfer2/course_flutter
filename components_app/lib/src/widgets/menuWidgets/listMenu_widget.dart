@@ -1,4 +1,3 @@
-import 'package:components_app/src/screens/alert_page.dart';
 import 'package:components_app/src/utils/list_icons_util.dart';
 import 'package:flutter/material.dart';
 import '../../providers/menu_provider.dart';
