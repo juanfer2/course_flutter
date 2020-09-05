@@ -1,30 +1,35 @@
 {
-  "nombreApp" : "Componentes",
-  "rutas" : [
+  "nombreApp": "Componentes",
+  "rutas": [
     {
-        "ruta" : "alert",
-        "icon" : "add_alert",
-        "texto": "Alertas"
+      "ruta": "alert",
+      "icon": "add_alert",
+      "texto": "Alertas"
     },
     {
-        "ruta" : "avatar",
-        "icon" : "accessibility",
-        "texto": "Avatars"
+      "ruta": "avatar",
+      "icon": "accessibility",
+      "texto": "Avatars"
     },
     {
-        "ruta" : "card",
-        "icon" : "folder_open",
-        "texto": "Cards - Tarjetas"
+      "ruta": "card",
+      "icon": "folder_open",
+      "texto": "Cards - Tarjetas"
     },
     {
-        "ruta" : "animated_container",
-        "icon" : "donut_large",
-        "texto": "Animated Container"
+      "ruta": "animated_container",
+      "icon": "donut_large",
+      "texto": "Animated Container"
     },
     {
-        "ruta" : "input",
-        "icon" : "input",
-        "texto": "Input"
+      "ruta": "input",
+      "icon": "input",
+      "texto": "Input"
+    },
+    {
+      "ruta": "slider",
+      "icon": "list",
+      "texto": "Slider Page"
     }
   ]
 }

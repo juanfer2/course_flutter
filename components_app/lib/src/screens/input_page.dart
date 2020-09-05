@@ -1,3 +1,4 @@
+import 'package:components_app/src/widgets/DropDown/dropDown_widget.dart';
 import 'package:flutter/material.dart';
 
 class InputPage extends StatefulWidget {
@@ -12,6 +13,14 @@ class _InputPageState extends State<InputPage> {
   String _email = '';
   String _password = '';
   String _date = '';
+  String _selectedOption = 'Volar';
+
+  final List<String> menuOptions = [
+    'Volar',
+    'Rayos X',
+    'Super Aliento',
+    'Super Fuerza'
+  ];
 
   TextEditingController _inputDateController = new TextEditingController();
 
@@ -27,6 +36,9 @@ class _InputPageState extends State<InputPage> {
           vertical: 2.0,
         ),
         children: <Widget>[
+          SizedBox(
+            height: 15.0,
+          ),
           _createInput(),
           Divider(),
           _emailInput(),
@@ -34,8 +46,20 @@ class _InputPageState extends State<InputPage> {
           _passwordInput(),
           Divider(),
           _dateInput(context),
+          Divider(),
+          DropdownButton(
+            value: _selectedOption,
+            items: getOptionsMenu(),
+            onChanged: (opt) {
+              setState(() {
+                _selectedOption = opt;
+              });
+            },
+          ),
           ListTile(
             title: Text('My name is: $_name'),
+            subtitle: Text('Email: $_email'),
+            trailing: Text(_selectedOption),
           ),
         ],
       ),
@@ -129,6 +153,17 @@ class _InputPageState extends State<InputPage> {
       _setDate(picked.toString());
       _inputDateController.text = _date;
     }
+  }
+
+  List<DropdownMenuItem<String>> getOptionsMenu() {
+    List<DropdownMenuItem<String>> list = new List();
+    menuOptions.forEach((poder) {
+      list.add(DropdownMenuItem(
+        child: Text(poder),
+        value: poder,
+      ));
+    });
+    return list;
   }
 
   void _setName(String value) {
