@@ -16,19 +16,24 @@ class _SliderPageState extends State<SliderPage> {
       body: Container(
         child: Column(
           children: <Widget>[
-            Image(
-              image: NetworkImage(
-                "https://historia.nationalgeographic.com.es/medio/2019/03/28/04-saturno-deborando-a-su-hijo-goya_b31c4f27_800x1446.jpg",
-              ),
-              width: valueSlider,
-              fit: BoxFit.contain,
-            ),
             SizedBox(
               height: 20,
             ),
             SliderWidget(
               valueSlider: valueSlider,
               setValueSlider: setValueSlider,
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Expanded(
+              child: Image(
+                image: NetworkImage(
+                  "https://historia.nationalgeographic.com.es/medio/2019/03/28/04-saturno-deborando-a-su-hijo-goya_b31c4f27_800x1446.jpg",
+                ),
+                width: valueSlider,
+                fit: BoxFit.contain,
+              ),
             ),
           ],
         ),
